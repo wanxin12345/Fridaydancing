@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>星期舞</title>
+	</head>
+	
+	<body id="box" style="overflow: hidden;">
+		 <center>
+	<marquee behavior="alternate"  >
+       <span id="wordcolor_cahnge">欢迎来到星期舞</span>
+       </marquee>
+      <!-- <a href="表单验证.html"> <img src="img/FD480-762.png" id="soccer" width="600px" height="600px"></a>-->
+  <video width="800" height="" controls="controls" id="song_play">
+  	<source src="video/Vesion.mp4" type="video/mp4"></source>
+  	<object width="" height="" type="application/x-shockwave-flash" data="video.swf">
+  		<param name="movie" value="video.swf" />
+  		<param name="flashvars" value="autostart=true&amp;file=video.swf" />
+  	</object>
+  	当前浏览器不支持 video直接播放，点击这里下载视频： <a href="video/Vesion.mp4">下载视频</a>
+  </video><br>
+<a href="main1.html" id="main-in">点击进入首页</a>
+  </center>
+
+	</body>
+	<style type="text/css">
+/*清除默认*/
+*{
+border:0px;
+margin: 0px;
+padding: 0px;
+}
+body{
+background:-webkit-linear-gradient(left,#2e2e2e,#1c1917,#1d1916,#232221);
+/*opacity:0.2 ;*/
+}
+@FONT-FACE {/*自定义文字  */
+          font-family: myfont;
+          src:url("fonts/jianzhi.ttf");
+}
+/*设置标题的字体大小*/
+#wordcolor_cahnge{
+font-size:75px;
+font-family:myfont;
+}
+#song_play{
+	background-image: url(img/FD480-762.png);
+	background-size:cover ;
+	background-position: center;
+}
+
+#main-in{
+	color: springgreen;
+	text-decoration: none;
+	font-size: 30px;
+	position: absolute;
+	left: 43%;
+	top: 350px;
+	z-index: 2;
+	margin: auto auto;
+	border: 1px springgreen solid;
+}
+</style>
+<script type="text/javascript">
+	    function changeColor1(){
+        	//标题闪烁
+          var color="#f00|#fff|yellow|#A2A2D9|#880";
+            color=color.split("|");
+            document.getElementById("wordcolor_cahnge" +"").style.color=color[parseInt(Math.random() * color.length)];
+            //document.getElementById("main-in" +"").style.color=color[parseInt(Math.random() * color.length)];
+           } 
+             setInterval("changeColor1()",100);	
+            
+  </script>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>teachers.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<style type="text/css">
+*{
+border: 0px;
+margin: 0px;
+padding: 0px;
+}
+#bg_show{
+background-image: url("imgs/bg.png");
+width: 860px;
+height: 865px;
+ overflow: hidden; 
+  animation:myfirst4 4s;  
+}
+#show_center{
+width: 733px;
+height: 758px;
+background-color:#E9E9E9;
+transform:rotate(-3deg); 
+position: relative;
+top: 60px;
+box-shadow: 3px 3px 3px 2px #9D8249;
+}
+@FONT-FACE {/*自定义文字  */
+          font-family: myfont;
+          src:url("fonts/jianzhi.ttf");
+}
+.title_show{
+font-family: myfont;/* 引用自定义文字 */
+color:#666666;
+display:inline-block;
+transform:rotate(3deg); 
+font-size: 35px;
+padding-left: 20px;
+position: relative;
+left: -150px;
+top: 20px;
+}
+#content_show{
+transform:rotate(3deg); 
+}
+#word_show a{/* 设置上方标识样式 */
+color:white;
+font-size:20px;
+font-weight:bold;
+display:inline-block;
+text-decoration: none;
+width: 95px;
+height: 30px;
+border-radius:10px;
+background-color: #FF6600;
+padding-top: 5px;
+position: relative;
+left: -5px;
+top: 70px;
+margin-left: 25px;
+ transition:0.1s; 
+}
+#word_show a:hover{
+/* width: 120px;
+height: 40px;
+font-size: 25px; *//* 进行边框放大会有震动 */
+transform:scale(1.4);/* 对标识进行缩放 */
+}
+#showpot img{
+text-decoration: none;
+position: relative;
+top: 0px;
+transition: 2s;
+}
+ul li{
+list-style: none;
+}
+#black_pencil{
+position: absolute;
+left: 375px;
+top: -48px;
+  animation:myfirst4 4s;  
+}
+#top_redline{
+position: absolute;
+left:-15px;
+top: 120px;
+animation:myfirst3 3s;
+}
+#blue_redline{
+position: absolute;
+left:22px;
+top: 585px;
+animation:myfirst2 3s;
+}
+#bottom_bluepencil{
+position: absolute;
+left:688px;
+top: 575px;
+  animation:myfirst4 6s;  
+  animation-delay:2s; 
+}
+#right_three img{
+width:120px;
+height: 120px;
+transform:rotate(60deg);
+ animation:myfirst1 2s;  
+position: relative;
+top:-450px;
+left:300px;
+ transition:transform 1s; 
+-moz-transition:-moz-transform 1s;
+-webkit-transition:-webkit-transform 1s;
+-o-transition:-o-transform 1s;
+}
+#right_three img:hover{
+	transform: rotate(0deg);
+}
+@keyframes myfirst1/* 规定三个图片动画，从右边旋转进入 */
+{
+from{left:520px;}
+to{transform: rotate(-300deg);left:300px;}
+/* 100%	{transform: rotate(-360deg);left:0px;} */
+}
+@keyframes myfirst2/* 规定红蓝线动画，从左边进入 */
+{
+from{left:-709px;}
+to{left:0px;}
+}
+@keyframes myfirst3/* 规定红线动画，从左边进入 */
+{
+from{left:-780px;}
+to{left:0px;}
+}
+@keyframes myfirst4/* 规定最外面的div */
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+@keyframes myfirst5/* 规定内部div */
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/*3D切换*/
+#box{
+			width: 400px;
+			height: 200px;
+			padding: 100px;
+			margin: 100px auto;
+			-webkit-perspective:500px;
+			perspective:500px;
+			-webkit-perspective-origin: center center;
+			perspective-origin: center center;
+		}
+		.div{
+			width: 400px;
+			height: 200px;
+			position: relative;
+			-webkit-transform-style:preserve-3d ;
+			transform-style:preserve-3d ;
+			transition:3s;
+			-webkit-transform-origin: center center 0px;
+			transform-origin: center center 0px;
+		}
+		#box:hover .div{
+			-webkit-transform:rotateY(180deg) ;
+			transform:rotateY(180deg) ;
+		/*	-webkit-transform:skewY(180deg);
+			transform:skew(180deg,180deg);*/
+		}
+		.div div{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 400px;
+			height: 300px;
+			font-size: 20px;
+			text-align: center;
+			color: red;
+			-webkit-transform-style:preserve-3d ;
+			transform-style:preserve-3d ;
+			-webkit-backface-visibility: hidden;
+		}
+		.div div span{
+			display: block;
+			width: 300px;
+			height: 400px;
+			text-align: center;
+			margin: -100px auto;
+		}
+		.div div span img{
+			display: block;
+			width: 300px;
+			height: 400px;
+			text-align: center;
+			margin: 0px auto;
+		}
+		.div div:nth-of-type(1){
+			-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		}
+		.div div:nth-of-type(2){
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+		}
+    .qwe{
+    	margin-top: 10px;
+    	display: block;
+    	color: #FFFFFF;
+    	font-size: 20px;
+    	text-decoration: none;
+    	background: #2E2E2E;
+    	border-radius:10px;
+    }
+   /* #left_show{
+    	position: absolute;
+    	border: 1px red solid;
+    	width:400px;
+    	height: 100%;
+    	top: 0;
+    	left: 0;
+    }
+    #right_show{
+    	position: absolute;
+    	border: 1px red solid;
+    	width:400px;
+    	height: 100%;
+    	top: 0;
+    	right:0 ;
+    }*/
+    #logo{
+    	margin: 10px 60px;
+    	position: absolute;
+    }
+</style>
+<script type="text/javascript">
+$(function(){
+	 /* 初始化图片，显示第一张，其他隐藏 */
+	  $("#showpot li:eq(0)").show().siblings().hide(); 
+	 $("#word_show a").click(function(){
+		j=$(this).index();
+          var img_DOM=$("#showpot img").toArray();
+		  for(var i=0;i<=img_DOM.length-1;i++){
+			 if(i==j){
+				 $("#showpot li").hide();
+				 $("#showpot li").eq(i).show();
+			}
+		} 
+	});/* 点击标识切换内容结束 */
+});
+   
+</script>
+  </head>
+  
+  <body style="background-image: url(imgs/bg.png);"> 
+  <center>
+   <div id="bg_show">
+   	<a href="index.html" class="qwe">Back(FanHui)</a>
+   	<a href="login.html"class="qwe">Login(DengLu)</a>
+   <div id="show_center">
+<span class="title_show">Teachers</span><span class="title_show">-FD</span>
+<img alt="铅笔" src="imgs/black_pencil.png" id="black_pencil">
+		<img src="imgs/FD-108.png"id="logo">
+<div id="content_show">
+  <div id="word_show">
+  <a href="javascript:void(0)">Davie</a>
+  <a href="javascript:void(0)">Screw</a>
+  <a href="javascript:void(0)">Hop</a>
+  <a href="javascript:void(0)">YangMao</a>
+  <a href="javascript:void(0)">Flora-J</a>
+   </div>
+  <img alt="redline" src="imgs/top_redline.png" id="top_redline">
+   <div id="showpot"><!--标识下主要内容  -->
+   <ul id="box"><!--需要切换的图片  -->
+   <li class="div">
+   	<div>
+   		<span><img src="images/davie.jpg"/></span>
+   	</div>
+   	<div>
+			<span>
+				<br>
+				Davie<br>
+				He is very cool!<br>
+					He love this style of dance,<br>
+						and<br> 
+						he want to create dance room<br>
+							to teach much students!
+			</span>
+		</div>
+   </li>
+   <li class="div">
+   	<div>
+   		<span><img src="images/screw.jpg"/></span>
+   	</div>
+   	<div>
+			<span>
+				<br>
+				Screw<br>
+				He is very thin!<br>
+					He has teached for many years<br>
+						so don't worry,<br>
+							he is very good!
+			</span>
+		</div>
+   </li>
+   <li class="div">
+   	<div>
+   		<span><img src="images/hop.jpg"/></span>
+   	</div>
+   	<div>
+			<span>
+				<br>
+				Hop<br>
+				He is very cool!<br>
+					Helove this style of dance,<br>
+						and<br> 
+						he want to marry with Flora<br>
+							they are lovers!
+			</span>
+		</div>
+   </li>
+   <li class="div">
+   	<div>
+   		<span><img src="images/yangmao.jpg"/></span>
+   	</div>
+   	<div>
+			<span>
+				<br>
+				Yangmao<br>
+				He is very cool!<br>
+					Helove this style of dance,<br>
+						and<br> 
+						he had own dance room
+							
+			</span>
+		</div>
+   </li>
+   <li class="div">
+   	<div>
+   		<span><img src="images/flora.jpg"/></span>
+   	</div>
+   	<div>
+			<span>
+				<br>
+				Flora<br>
+				She is a beautiful gril!<br>
+					she love jazz and hip-pop,<br>
+						and<br> 
+						he want to marry with Hop<br>
+							to teach much students!
+			</span>
+		</div>
+   </li>
+   </ul>
+   </div>
+     <!--图片下红蓝双线  -->
+    <img alt="redline" src="imgs/blue_redline.png" id="blue_redline">
+      <img alt="redline" src="imgs/bottom_bluepencil.png" id="bottom_bluepencil">
+   </div>
+     </div>
+     <div id="right_three"><!--右边旋转三图  -->
+     <img src="images/guibu21.jpg"><br>
+     <img src="images/guibu22.jpg"><br>
+     <img src="images/guibu24.jpg">
+     
+     </div>
+   </div>
+   </center>
+  </body>
+</html>
